@@ -36,9 +36,14 @@
 //    }
 //  function which generates readme
 const generateMarkdown = data => {
-  return `#${data.title}
+  return `
+  <h1 align="center">${data.title}<h1>
+
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+
   ##Description
-  ${data.description}
+    ${data.description}
+
   ##Table of content
 - [Installation](#installation)
 - [Usage](#usage)
@@ -46,18 +51,25 @@ const generateMarkdown = data => {
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#Questions)
+
 ##Installation
-${data.installation}
+  ${data.installation}
+
 ##Usage
-${data.usage}
+  ${data.usage}
+
 ##Tests
-${data.tests}
+  ${data.tests}
+
 ##credits
-${data.contributors}
+  ${data.contributors}
+
 ##Questions
+
 Find me and my other work on GitHub at ttps://github.com/${data.github} or send me an email at ${data.email}
+
 ##License
-${data.license}
+  ${data.license}
 `
 }
 // I cannot figure out how to get the license to generate with the rest of the page so i am not using this function
